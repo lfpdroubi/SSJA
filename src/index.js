@@ -38,7 +38,7 @@ var institucional = $.ajax({
   // Add the variable for each of your AJAX requests to $.when()
   $.when(quadras, limites, areasVerdes, institucional).done(function() {
 
-  var mappos = L.Permalink.getMapLocation(zoom = 13, center = [-19.909, -43.99]);
+  var mappos = L.Permalink.getMapLocation(zoom = 16, center = [-27.17164,-51.55268]);
 
   var map = L.map('map', {
     center: mappos.center,
@@ -121,7 +121,7 @@ var institucional = $.ajax({
 		zoomOffset: -1
 	}).addTo(map);
 */
-  var Quadras = L.Proj.geoJson(quadras.responseJSON, {
+  var Quadras = L.geoJSON(quadras.responseJSON, {
     style: {
       color: 'blue',
       weight: 2
@@ -145,7 +145,7 @@ var institucional = $.ajax({
     }
   }).addTo(map);
 
-  var Institucional = L.Proj.geoJson(institucional.responseJSON, {
+  var Institucional = L.geoJSON(institucional.responseJSON, {
     style: {
       color: 'orange',
       weight: 2
