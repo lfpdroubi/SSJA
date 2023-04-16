@@ -1,0 +1,1 @@
+# Projeto Hipotético do Aeroporto Santa Terezinha - Joaçaba (SSJA)
