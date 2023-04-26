@@ -128,7 +128,9 @@ var institucional = $.ajax({
     },
     onEachFeature: function( feature, layer ){
       layer.bindPopup(
-        "<b>Área (m2): </b>" + feature.properties.Area
+        "<b>ID: </b>" + feature.properties.id + "<br>" +
+        "<b>Área (m2): </b>" + feature.properties.Area.toLocaleString('de-DE', { maximumFractionDigits: 2}) + "<br>" +
+        "<b>Etapa: </b>" + feature.properties.Etapa
       );
     }
   }).addTo(map);
@@ -140,7 +142,8 @@ var institucional = $.ajax({
     },
     onEachFeature: function( feature, layer ){
       layer.bindPopup(
-        "<b>Área: </b>" + feature.properties.Area
+        "<b>ID: </b>" + feature.properties.id + "<br>" +
+        "<b>Área: </b>" + feature.properties.Area.toLocaleString('de-DE', { maximumFractionDigits: 2}) + "<br>"
       );
     }
   }).addTo(map);
@@ -152,7 +155,8 @@ var institucional = $.ajax({
     },
     onEachFeature: function( feature, layer ){
       layer.bindPopup(
-        "<b>Área: </b>" + feature.properties.Area
+        "<b>ID: </b>" + feature.properties.id + "<br>" +
+        "<b>Área: </b>" + feature.properties.Area.toLocaleString('de-DE', { maximumFractionDigits: 2}) + "<br>"
       );
     }
   }).addTo(map);
